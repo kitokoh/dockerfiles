@@ -40,7 +40,7 @@ RUN --mount=target=/var/www/app/node_modules,type=cache \
 # Prepare php image
 FROM php:${PHP_VERSION}-fpm-alpine as prod
 
-LABEL maintainer="David Bomba <turbo124@gmail.com>"
+LABEL maintainer="David Bomba <africa.novatech@gmail.com>"
 
 # Adding caching_sha2_password.so
 # With this we get native support for caching_sha2_password
