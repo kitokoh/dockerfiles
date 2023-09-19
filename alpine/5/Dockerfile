@@ -7,7 +7,7 @@ FROM --platform=$BUILDPLATFORM node:lts-alpine as build
 
 # Download Invoice Ninja
 ARG INVOICENINJA_VERSION
-ADD https://github.com/invoiceninja/invoiceninja/tarball/v$INVOICENINJA_VERSION /tmp/ninja.tar.gz
+ADD https://github.com/kitokoh/invoiceninja/tarball/v$INVOICENINJA_VERSION /tmp/ninja.tar.gz
 
 RUN set -eux; apk add curl unzip
 
@@ -79,7 +79,7 @@ COPY rootfs /
 
 ## Create user
 ARG UID=1500
-ENV INVOICENINJA_USER invoiceninja
+ENV INVOICENINJA_USER odemeix
 
 RUN addgroup --gid=$UID -S "$INVOICENINJA_USER" \
     && adduser --uid=$UID \

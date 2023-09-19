@@ -3,10 +3,10 @@ $(error The TAG variable is missing.)
 endif
 
 # Docker Hub namespace
-HUB_NAMESPACE="invoiceninja"
+HUB_NAMESPACE="odemix"
 
 # Image name
-IMAGE="invoiceninja"
+IMAGE="odemix"
 
 # Check if v5 tag is passed, so that a v5 version should be built
 IS_V5=$(shell echo ${TAG} | egrep ^5)
