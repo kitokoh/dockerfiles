@@ -20,7 +20,7 @@ services:
     networks:
       - invoiceninja
     #extra_hosts:
-      - "in5.localhost:192.168.0.124 " #host and ip
+      #- "in5.localhost:192.168.0.124 " #host and ip
 
   app:
     image: invoiceninja/invoiceninja:5
@@ -62,7 +62,7 @@ services:
     networks:
       - invoiceninja
     #extra_hosts:
-      - "in5.localhost:192.168.0.124 " #host and ip
+      #- "in5.localhost:192.168.0.124 " #host and ip
 
   # THIS IS ONLY A VALID CONFIGURATION FOR IN 4. DO NOT USE FOR IN 5.
   # cron:
