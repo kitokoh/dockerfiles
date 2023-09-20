@@ -1,0 +1,22 @@
+steps:
+  # Docker Build
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [
+            'build',
+            '-t',
+            'europe-central2-docker.pkg.dev/invoice-399316/odeme/my-app:${SHORT_SHA}',
+            '-t',
+            'europe-central2-docker.pkg.dev/invoice-399316/odeme/my-app:latest',
+            '--cache-from',
+            'europe-central2-docker.pkg.dev/invoice-399316/odeme/my-app:latest',
+            '.'
+          ]
+
+  # Docker push to Google Artifact Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push',  'europe-central2-docker.pkg.dev/invoice-399316/odeme/my-app:${SHORT_SHA}']
+
+# Store images in Google Artifact Registry 
+images:
+  - europe-central2-docker.pkg.dev/invoice-399316/odeme/my-app:${SHORT_SHA}
+  - europe-central2-docker.pkg.dev/invoice-399316/odeme/my-app:latest
