@@ -1,3 +1,8 @@
+gcloud builds submit --tag gcr.io/invoice-399316/image1
+
+
+
+
 ![Docker images](https://github.com/invoiceninja/dockerfiles/workflows/Docker%20images/badge.svg)
 [![Docker image, latest](https://img.shields.io/docker/image-size/invoiceninja/invoiceninja/latest?label=latest)](https://hub.docker.com/r/invoiceninja/invoiceninja)
 [![Docker image, alpine](https://img.shields.io/docker/image-size/invoiceninja/invoiceninja/alpine?label=alpine)](https://hub.docker.com/r/invoiceninja/invoiceninja)
